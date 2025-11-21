@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+<style>
+    body{
+        background-color: bisque;
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+
+    }
+
+    .register{
+        background-color: aqua;
+        font-weight: 200 ;
+        width: 250px;
+        padding : 20px;
+        margin : 50px auto;
+        box-shadow: 0px 0px 10px lightblue;
+    }
+
+    .title{
+        color: coral;
+        margin-bottom: 20px;
+    }
+
+    label{
+        display: block;
+        text-align: left;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        color :black;
+    }
+
+    input {
+        width : 100%;
+        padding: 5px;
+        border-radius : 20px;
+        border : solid;
+    }
+
+    button{
+        margin-top: 5px;
+        background-color: rgb(45, 178, 22);
+        color: whitesmoke;
+        cursor : pointer;
+    }
+
+    button:hover{
+        background-color: crimson;
+    }
+
+    .roles {
+    display: flex;
+    justify-content: center; /* centers horizontally */
+    gap: 20px;               /* spacing between options */
+    margin-top: 10px;
+}
+.roles label {
+    font-weight: bold;
+    cursor: pointer;
+}
+</style>
+
+</head>
+<body>
+    <div class = 'register'>
+        <h1 class = 'title'> Register Here! </h1>
+        <form action="/register" method="post">
+    <label for="username">Username</label>
+    <input id="username" type="text" name="username" placeholder="Enter your name" required>
+
+    <label for="email">Email</label>
+    <input id="email" type="email" name="email" placeholder="Enter your email" required>
+
+    <label for="password">Password</label>
+    <input id="password" type="password" name="password" placeholder="Enter your Password" required>
+
+    <p>Select your Role:</p>
+<div class="roles">
+    <label><input type="radio" name="role" value="Admin" required> Admin</label>
+    <label><input type="radio" name="role" value="Doctor"> Doctor</label>
+    <label><input type="radio" name="role" value="Patient"> Patient</label>
+</div>
+
+    <button type="submit">Submit</button>
+</form>
+    </div>
+</body>
+</html>
